@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="Project2.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" media="screen and (max-width: 1140px)" href="responsive.css">
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
+    <div id="loading"></div>
+
     <nav id="navbar">
         <img src="./Images/logo.png" alt="">
         <div>
@@ -25,7 +29,7 @@
             <h1 id="home-section-heading">Welcome to MyOnlineMeal</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure molestias ullam obcaecati expedita corporis repellendus quas adipisci ipsum voluptatum nostrum?</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <button>Order Now</button>
+            <button type="button" id="order-now" onclick="orderNow()">Order Now</button>
         </div>
     </section>
 
@@ -62,7 +66,8 @@
 
     <section id="contact-section">
         <h1 id="contact-section-heading">Contact Us</h1>
-        <form action="noaction.php">
+
+        <form>
             <label for="name">Name: </label>
             <input type="text" id="name" placeholder="Enter Your Name">
 
@@ -74,9 +79,13 @@
 
             <label for="message">Message: </label>
             <textarea id="message" cols="30" rows="10" placeholder="Write The Message Here"></textarea>
+
+            <button class="contact-section-send-btn" type="button" onclick="sendMessage()">Send Message</button>
         </form>
     </section>
 
     <footer>Copyright &copy; www.MyOnlineMeal.com All Rights Reserved!</footer>
+
+    <script src="./Project2.js"></script>
 </body>
 </html>

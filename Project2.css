@@ -8,6 +8,14 @@ html{
     scroll-behavior: smooth;
 }
 
+#loading{
+    background: #fff url('./Images/preloader.gif') no-repeat center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+}
+
 /* navigation menu */
 #navbar{
     display: flex;
@@ -201,11 +209,27 @@ html{
     font-size: 1rem;
 }
 
+.contact-section-send-btn{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 10rem;
+    margin: 8px auto;
+    padding: 8px 0px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+}
+
+.contact-section-send-btn:hover{
+    background-color: lightgrey;
+}
+
 /* Footer */
 footer{
     color: white;
     background-color: black;
     text-align: center;
     margin-top: 0.2rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    padding: 15px 0px;
 }
