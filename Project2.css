@@ -20,25 +20,17 @@ html{
 #navbar{
     display: flex;
     align-items: center;
-    position: sticky;
-    top: 0rem;
+    background-color: #000000ad;
 }
 
-#navbar::before{
-    content: "";
-    position: absolute;
-    top: 0rem;
-    left: 0rem;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: -1;
-    opacity: 0.4;
-}
-
-#navbar img{
-    width: 3.8rem;
+#navbar img {
+    width: 80px;
     padding: 0.6rem;
+    border-radius: 46px;
+}
+
+#navbar > div{
+    margin-bottom: 12px;
 }
 
 .navbaritem{
@@ -54,35 +46,55 @@ html{
     border-radius: 2rem;
 }
 
+#back-to-top-btn{
+    position: fixed;
+    z-index: 1;
+    top: 10rem;
+    right: 2rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    padding: 0rem 0.3rem;
+    cursor: pointer;
+    opacity: 0.5;
+    width: 6rem;
+    display: none;
+}
+
+#back-to-top-btn:hover{
+    opacity: 1;
+    background-color: #ebf3f3eb;
+}
+
+#back-to-top-btn a{
+    color: black;
+    text-decoration: none;
+}
+
 /* home section */
-#home-section div{
-    display: flex;
-    flex-direction: column;
-    height: 23rem;
-    justify-content: center;
-    align-items: center;
+#home-section-and-navbar{
+    background-image: url("./Images/bg1.jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
     color: white;
+}
+
+#home-section-and-navbar > div{
+    padding: 4.5rem 0rem;
+}
+
+#home-section-and-navbar > div > p {
+    font-size: 18px;
+    padding: 0px 15px;
 }
 
 #home-section-heading{
     font-size: 3rem;
+    padding: 0px 15px;
 }
 
-#home-section::before{
-    content: "";
-    position: absolute;
-    top: 0rem;
-    left: 0rem;
-    width: 100%;
-    height: 27rem;
-    background-image: url("./Images/bg1.jpg");
-    background-position: center;
-    background-size: cover;
-    z-index: -2;
-}
-
-#home-section div button{
-    border: 4px solid white;
+#home-section-and-navbar > div button{
+    border: 3px solid white;
     border-radius: 1.3rem;
     font-size: 1.5rem;
     margin: 1.2rem 0rem;
@@ -92,8 +104,10 @@ html{
     cursor: pointer;
 }
 
-#home-section div button:hover{
-    background-color: #2a27e6;
+#home-section-and-navbar > div button:hover{
+    background-color: #c8cfce;
+    color: black;
+    border-color: black;
 }
 
 /* services section */
@@ -114,10 +128,14 @@ html{
 .services-box{
     border: 4px solid brown;
     border-radius: 5rem;
-    width: 27rem;
+    width: 100%;
     margin: 0.5rem 1.5rem;
     padding: 0.7rem;
     text-align: center;
+}
+
+.services-box > p{
+    margin: 0px 10px 5px 10px;
 }
 
 #services-section div img{
@@ -128,15 +146,17 @@ html{
 
 /* clients section */
 #clients-section{
+    margin: 30px 0px 3px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: relative;
+    padding: 7.7rem 0rem;
 }
 
 #clients-section div img{
-    width: 6rem;
+    width: 6.5rem;
     margin: 2rem;
     padding: 0.5rem
 }
@@ -231,5 +251,5 @@ footer{
     text-align: center;
     margin-top: 0.2rem;
     font-size: 1.4rem;
-    padding: 15px 0px;
+    padding: 15px 10px;
 }

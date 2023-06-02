@@ -1,9 +1,10 @@
 let Loader = document.getElementById("loading");
+let backtoTop = document.getElementById('back-to-top-btn'); 
 window.addEventListener("load", function(){
     Loader.style.display = "none";
+    backtoTop.style.display = "block";
 })
 
-let items = ["pizza","burger","fish","cold drink","chicken karahi"];
 function orderNow(){
 	swal({   
         title: "Enter Item Name!",   
@@ -17,7 +18,7 @@ function orderNow(){
         else{
             swal({   
                 title: "Enter Item Quantity!",   
-                text: "Enter The Quantity Of Item You Are Ordering (In Digits):",   
+                text: "Enter Item Quantity (In Digits):",   
                 content: "input",
                 button: "Confirm Order"
             }).then((confirmOrder)=>{
@@ -42,7 +43,7 @@ const sendMessage = () => {
     
     if (name === "" || email === "" || phone === "" || message === "")
     {
-        swal('Message Not Sent Successfully!', 'You Did Fill The Input Fields Correctly!','error');
+        swal('Message Not Sent Successfully!', 'You Did Not Fill The Form Correctly!','error');
     }
     else
     {

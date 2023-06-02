@@ -2,19 +2,20 @@
     flex-direction: column;
 }
 
-#navbar::before{
-    height: 110%;
-}
-
 .navbaritem {
     margin: 0rem 0.15rem;
     padding: 0.25rem 0.3rem;
     font-size: 1rem;
 } 
 
-#home-section div {
-    text-align: center;
-    height: 20.8rem;
+#back-to-top-btn{
+    z-index: 1;
+    padding: 0px 3px;
+    width: 5rem;
+    right: 20px;
+    font-size: 1.1rem;
+    right: 1rem;
+    display: none;
 }
 
 #services-section{
@@ -52,13 +53,16 @@
         font-size: 2.2rem;
     }
 
-    #home-section div p{
-        font-size: 0.9rem;
+    #home-section-and-navbar > div p{
+        font-size: 1rem;
     }
 
-    #home-section div button {
-        font-size: 1.15rem;
+    #home-section-and-navbar > div button {
         border: 3.5px solid white;
+    }
+
+    #clients-section div img{
+        width: 4.8rem;
     }
 }
 
@@ -74,12 +78,11 @@
         font-size: 2.2rem;
     }
 
-    #home-section div p{
-        font-size: 0.93rem;
+    #home-section-and-navbar > div p{
+        font-size: 1rem;
     }
 
-    #home-section div button {
-        font-size: 1.15rem;
+    #home-section-and-navbar > div button {
         border: 3.5px solid white;
     }
 }
@@ -89,7 +92,17 @@
         font-size: 2.1rem;
     }
 
-    #home-section div button {
+    #home-section-and-navbar > div button {
         font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 315px) {
+    .services-box {
+        width: 85%;
+    }
+    
+    #clients-section {
+        padding: 6.5rem 0rem;
     }
 }
